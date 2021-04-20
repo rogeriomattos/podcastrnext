@@ -7,12 +7,11 @@ export function Header() {
     const currentDate = format(new Date(), 'EEEEEE, d MMMM', {
         locale: ptBR
     });
-
+ 
 
     return(
-        <header className={styles.container}>
+        <header className={styles.headerContainer}>
            <img src="assets/logo.svg" alt="Podcastr"/> 
-
            <p>O melhor para você ovuri, sempre</p>
 
            <span>{currentDate}</span>
