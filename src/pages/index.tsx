@@ -1,5 +1,4 @@
 import { GetStaticProps } from 'next';
-import Image from 'next/image';
 import { api } from '../services/api';
 import { format, parseISO } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
@@ -32,18 +31,10 @@ export default function Home({ allEpisodes, latestEpisodes }: HomeProps) {
           {latestEpisodes.map(episode => {
             return(
               <li key={episode.id}>
-                {/*<Image 
-                  width={192} 
-                  height={192} 
+                <img 
                   src={episode.thumbnail} 
                   alt={episode.title}
-                  objectFit="cover"  
-                />*/}
-
-                <img  
-                  src={episode.thumbnail} 
-                  alt={episode.title}
-                  style={{objectFit: 'cover'}}  
+                  style={{objectFit: 'cover'}}
                 />
 
                 <div className={styles.episodeDetails}>
